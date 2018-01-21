@@ -1,0 +1,9 @@
+heartbeat.monitors:
+
+- type: icmp
+  schedule: '@every 5s'
+  hosts:{{range ls "/latest/hosts"}}{{ $hostname := getv (printf "/latest/hosts/%s/hostname" .)}}
+    - {{ getv (printf "/latest/hosts/%s/agent_ip" $hostname)}}{{end}}
+
+output.elasticsearch:
+  hosts: ['172.16.1.17:9200']

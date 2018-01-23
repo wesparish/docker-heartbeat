@@ -4,4 +4,4 @@ dest = "/usr/share/heartbeat/heartbeat.yml"
 keys = [
   "/latest/hosts"
 ]
-reload_cmd = "pkill heartbeat ; /usr/share/heartbeat/heartbeat -e &"
+#reload_cmd = "pkill heartbeat ; /usr/share/heartbeat/heartbeat -e &"

@@ -1,0 +1,7 @@
+[template]
+src = "dynamic.json.tmpl"
+dest = "/usr/share/heartbeat/dynamic.json"
+keys = [
+  "/latest/hosts"
+]
+
